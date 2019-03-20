@@ -1,0 +1,10 @@
+use strict';
+//forces to use modern javascript
+
+AFRAME.registerComponent('rotateCube',{
+
+    schema: {},
+    init: function(){
+        const Context_AF = this;
+
+});
