@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalia Hameiri - IMD3901B A3 - WebVR Rubic's Cube</title>
+    </head>
+    <body>
+        <a-scene shadow="type:basic;">
+               <!-- Setting up camera and curser-->
+                <a-entity position ="0 0 0" camera look-controls>
+                    <a-entity cursor ="fuse:true; fuseTimeOut:1000;rayOrigin:mouse;"
+                              position="0 0 -1">                
+                    </a-entity>
+                </a-entity>
+               
+                <!--loading lights
+                <a-entity light="type:directional; castShadow:true; intensity:0.6; shadowBias:-0.000001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-0.5 1 1"></a-entity>
+                <a-entity light="type: spot; angle: 45"></a-entity>-->
+                <a-entity light="type: ambient; intensity: 1.0; color:#FFF;"></a-entity>
+                
+                <!--Loading models-->
+                
+                <a-entity geometry="primitive: plane; height: 10; width: 10" material="side: double; color:#ff0000"></a-entity>
+
+                
+                <a-sky color="#ffffff"></a-sky>
+        </a-scene>    
+    </body>
+</html>
