@@ -2,27 +2,98 @@
 <html>
     <head>
         <title>Kalia Hameiri - IMD3901B A3 - WebVR Rubic's Cube</title>
+        <script src="/js/aframe.min.js"></script> <!-- https://github.com/aframevr/aframe -->
     </head>
     <body>
         <a-scene shadow="type:basic;">
                <!-- Setting up camera and curser-->
-                <a-entity position ="0 0 0" camera look-controls>
+                <a-entity position ="0 0 0" camera look-controls wasd-controls>
                     <a-entity cursor ="fuse:true; fuseTimeOut:1000;rayOrigin:mouse;"
                               position="0 0 -1">                
                     </a-entity>
                 </a-entity>
-               
-                <!--loading lights
-                <a-entity light="type:directional; castShadow:true; intensity:0.6; shadowBias:-0.000001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-0.5 1 1"></a-entity>
-                <a-entity light="type: spot; angle: 45"></a-entity>-->
-                <a-entity light="type: ambient; intensity: 1.0; color:#FFF;"></a-entity>
-                
-                <!--Loading models-->
-                
-                <a-entity geometry="primitive: plane; height: 10; width: 10" material="side: double; color:#ff0000"></a-entity>
+            
+                <!--Loading planes--> 
+                <!--Red faces--> 
+                <a-plane position="0 0 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
+                <a-plane position="0 1 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
+                <a-plane position="0 -1 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
 
+                <a-plane position="1 0 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
+                <a-plane position="1 1 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
+                <a-plane position="1 -1 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
                 
-                <a-sky color="#ffffff"></a-sky>
+                <a-plane position="-1 0 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
+                <a-plane position="-1 1 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
+                <a-plane position="-1 -1 -2" width = "0.95" height="0.95" rotation = "0 0 0"  color="#FF0000" ></a-plane>
+                
+                <!--Blue faces--> 
+                <a-plane position="-2 0 0" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff" ></a-plane>
+                <a-plane position="-2 1 0" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
+                <a-plane position="-2 -1 0" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
+
+                <a-plane position="-2 0 1" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
+                <a-plane position="-2 1 1" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
+                <a-plane position="-2 -1 1" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff" ></a-plane>
+                
+                <a-plane position="-2 0 -1" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
+                <a-plane position="-2 1 -1" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
+                <a-plane position="-2 -1 -1" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
+                
+                <!--Green faces#00ff00-->
+                <a-plane position="2 0 0" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00" ></a-plane>
+                <a-plane position="2 1 0" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
+                <a-plane position="2 -1 0" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
+
+                <a-plane position="2 0 1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
+                <a-plane position="2 1 1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
+                <a-plane position="2 -1 1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00" ></a-plane>
+                
+                <a-plane position="2 0 -1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
+                <a-plane position="2 1 -1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
+                <a-plane position="2 -1 -1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
+                 
+                 <!--Orange faces--> 
+                 <a-plane position="0 0 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 <a-plane position="0 1 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 <a-plane position="0 -1 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+ 
+                 <a-plane position="1 0 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 <a-plane position="1 1 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 <a-plane position="1 -1 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 
+                 <a-plane position="-1 0 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 <a-plane position="-1 1 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 <a-plane position="-1 -1 2" width = "0.95" height="0.95" rotation = "0 -180 0"  color="#ff7700" ></a-plane>
+                 
+                 <!--Yellow faces--> 
+                 <a-plane position="0 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 <a-plane position="0 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 <a-plane position="0 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+ 
+                 <a-plane position="1 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 <a-plane position="1 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 <a-plane position="1 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 
+                 <a-plane position="-1 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 <a-plane position="-1 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 <a-plane position="-1 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+                 
+                  <!--White faces--> 
+                  <a-plane position="0 -2 0" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  <a-plane position="0 -2 1" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  <a-plane position="0 -2 -1" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+  
+                  <a-plane position="1 -2 0" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  <a-plane position="1 -2 1" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  <a-plane position="1 -2 -1" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  
+                  <a-plane position="-1 -2 0" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  <a-plane position="-1 -2 1" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  <a-plane position="-1 -2 -1" width = "0.95" height="0.95" rotation = "-90 0 0"  color="#ffffff" ></a-plane>
+                  
+
+                <a-sky color = "#000000"></a-sky> 
         </a-scene>    
     </body>
 </html>

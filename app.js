@@ -16,17 +16,16 @@ app.get('/index',function (req, res){
 
 
 
-socketIO.on('connection',function(socket){
+/*socketIO.on('connection',function(socket){
     //listen for connection event from client then do some stuff
     console.log(socket.id + ' connected!');
     
     socket.on('disconnect',function(){
         console.log(socket.id +' disconnected');
     });
-    
-       
-});
+         
+});*/
     
 //start server
 server.listen(LISTEN_PORT);
-console.log('Listening on port: '+LISTEN_PORT);
+console.log('Listening on port:'+LISTEN_PORT);
