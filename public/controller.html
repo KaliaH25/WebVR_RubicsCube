@@ -18,13 +18,16 @@
               <th><button id="C2up" type="button">↑</button></th> 
               <th><button id="C3up" type="button">↑</button></th>
               <th></th>
+              <th><button id="C4up" type="button">↑</button></th>
+              <th><button id="C5up" type="button">↑</button></th> 
+              <th><button id="C6up" type="button">↑</button></th>
             </tr>
             <tr>
-              <td><button id="R1left" type="button">←</button></td>
+              <td><button id="R3left" type="button">←</button></td>
               <td></td>
               <td></td>
               <td></td>
-              <td><button id="R1right" type="button">→</button></td>
+              <td><button id="R3right" type="button">→</button></td>
             </tr>
             <tr>
               <td><button id="R2left" type="button" >←</button></td>
@@ -34,11 +37,11 @@
               <td><button id="R2right" type="button">→</button></td>
             </tr>
             <tr>
-              <td><button id="R3left" type="button" >←</button></td>
+              <td><button id="R1left" type="button" >←</button></td>
               <td></td>
               <td></td>
               <td></td>
-              <td><button id="R3right" type="button" >→</button></td>
+              <td><button id="R1right" type="button" >→</button></td>
             </tr>
             <tr>
               <th></th>
@@ -46,6 +49,9 @@
               <th><button id="C2down" type="button" >↓</button></th> 
               <th><button id="C3down" type="button" >↓</button></th>
               <th></th>
+              <th><button id="C4down" type="button" >↓</button></th>
+              <th><button id="C5down" type="button" >↓</button></th> 
+              <th><button id="C6down" type="button" >↓</button></th>
             </tr>
           </table>
           <br>
@@ -72,6 +78,18 @@
                 console.log("click C3up");
                 socket.emit('C3up');
             });
+            document.querySelector("#C4up").addEventListener('click',function(){
+                console.log("click C4up");
+                socket.emit('C4up');
+            });
+            document.querySelector("#C5up").addEventListener('click',function(){
+                console.log("click C5up");
+                socket.emit('C5up');
+            });
+            document.querySelector("#C6up").addEventListener('click',function(){
+                console.log("click C6up");
+                socket.emit('C6up');
+            });
             //down events
             document.querySelector("#C1down").addEventListener('click',function(){
                 console.log("click C1down");
@@ -85,7 +103,18 @@
                 console.log("click C3down");
                 socket.emit('C3down');
             });
-
+            document.querySelector("#C4down").addEventListener('click',function(){
+                console.log("click C4down");
+                socket.emit('C4down');
+            });
+            document.querySelector("#C5down").addEventListener('click',function(){
+                console.log("click C5down");
+                socket.emit('C5down');
+            });
+            document.querySelector("#C6down").addEventListener('click',function(){
+                console.log("click C6down");
+                socket.emit('C6down');
+            });
             //left events
             document.querySelector("#R1left").addEventListener('click',function(){
                 console.log("click R1left");
