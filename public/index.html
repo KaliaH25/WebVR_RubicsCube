@@ -75,7 +75,37 @@
             <a-entity class="F2 C4 R1">
                 <a-plane  id="cubel18" position="-2 -1 -1" width = "0.95" height="0.95" rotation = "0 90 0"  color="#0000ff"></a-plane>
             </a-entity>
+            
+            <!--Yellow faces--> 
+            <a-entity class="F5 C2 C5">
+                <a-plane  id="cubel37" position="0 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
+            </a-entity>
+            <a-entity class="F5 C2 C6">
+                <a-plane  id="cubel38" position="0 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>         
+            </a-entity>
+            <a-entity class="F5 C2 C4">
+                <a-plane  id="cubel39" position="0 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>     
+            </a-entity>
                 
+            <a-entity class="F5 C3 C5">
+                <a-plane  id="cubel40" position="1 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>   
+            </a-entity>
+            <a-entity class="F5 C3 C6">
+                <a-plane  id="cubel41" position="1 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>    
+            </a-entity>
+            <a-entity class="F5 C3 C4">
+                <a-plane  id="cubel42" position="1 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>   
+            </a-entity>
+                
+            <a-entity class="F5 C1 C5">
+                <a-plane  id="cubel43" position="-1 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>    
+            </a-entity>
+            <a-entity class="F5 C1 C6">
+                <a-plane  id="cubel44" position="-1 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>       
+            </a-entity>
+            <a-entity class="F5 C1 C4">
+                <a-plane  id="cubel45" position="-1 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>        
+            </a-entity>
                 
             <!--Green faces#00ff00-->
             <a-entity class="F3 C5 R2">
@@ -97,8 +127,7 @@
             <a-entity class="F3 C6 R1">
                 <a-plane  id="cubel24" position="2 -1 1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00" ></a-plane>
             </a-entity>
-                
-                
+                   
             <a-entity class="F3 C4 R2">
                 <a-plane  id="cubel25" position="2 0 -1" width = "0.95" height="0.95" rotation = "0 -90 0"  color="#00ff00"></a-plane>
             </a-entity>
@@ -141,36 +170,7 @@
             </a-entity>
                 
         
-            <!--Yellow faces--> 
-            <a-entity class="F5 C2 C5">
-                <a-plane  id="cubel37" position="0 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>
-            </a-entity>
-            <a-entity class="F5 C2 C6">
-                <a-plane  id="cubel38" position="0 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>         
-            </a-entity>
-            <a-entity class="F5 C2 C4">
-                <a-plane  id="cubel39" position="0 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>     
-            </a-entity>
             
-            <a-entity class="F5 C3 C5">
-                <a-plane  id="cubel40" position="1 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>   
-            </a-entity>
-            <a-entity class="F5 C3 C6">
-                <a-plane  id="cubel41" position="1 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>    
-            </a-entity>
-            <a-entity class="F5 C3 C4">
-                <a-plane  id="cubel42" position="1 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>   
-            </a-entity>
-            
-            <a-entity class="F5 C1 C5">
-                <a-plane  id="cubel43" position="-1 2 0" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>    
-            </a-entity>
-            <a-entity class="F5 C1 C6">
-                <a-plane  id="cubel44" position="-1 2 1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>       
-            </a-entity>
-            <a-entity class="F5 C1 C4">
-                <a-plane  id="cubel45" position="-1 2 -1" width = "0.95" height="0.95" rotation = "90 0 0"  color="#f2ff00" ></a-plane>        
-            </a-entity>
                       
             <!--White faces--> 
             <a-entity class="F6 C2 C5">
@@ -218,18 +218,23 @@
             //custom event
             socket.on('rotate_column',function(data){
                console.log('column: '+ data.column + " direction: " + data.direction);
-               let colCubes = document.querySelectorAll(".C"+data.column);
-               console.log(colCubes.length);
-               colCubes.forEach(function(cubel){
-                    console.log(cubel.id);
+               let colCubes = document.querySelectorAll(".C"+data.column); //get reference to cubels in column to be rotated
+               let cubeClasses = new Array(colCubes.length);//make empty array of same length to save the class names 
+               var i =0;
+               colCubes.forEach(function(cubel){//loop through cubeElements
+                    //console.log(cubel);
+                    //rotate column cubel by cubel
                     if(data.column<4){
                         cubel.object3D.rotation.x += THREE.Math.degToRad(90*data.direction);
                     }
                     else{
                         cubel.object3D.rotation.z += THREE.Math.degToRad(90*data.direction);
-                    }       
+                    }
+                    cubeClasses[i] = cubel.className;//save class name of cube
+                    console.log(cubeClasses[i])    
+                    i++;//increase index   
                })
-              
+                updateClassName(colCubes,cubeClasses,data.direction);                
             });
             socket.on('rotate_row',function(data){
                console.log('row: '+ data.row + " direction: " + data.direction);
@@ -240,6 +245,25 @@
                     cubel.object3D.rotation.y += THREE.Math.degToRad(90*data.direction);
                })
             });
+
+            function updateClassName(cubeList,classNameList,dir){
+                var i =0;
+                cubeList.forEach(function(cube){
+                    console.log('old: '+ cube.className);
+
+                    j = i+(dir*3);//the cube always moves three positions over
+                    if(j<0){
+                        j+=classNameList.length;//rolls over value to end of array
+                    }
+                    else if(j>11){
+                        j-=classNameList.length;//rolls over value to begining of array
+                    
+                    }
+                    cube.className = classNameList[j]
+                    console.log('new: '+ cube.className);
+                    i++;
+                })
+            }
         </script>
     </body>
 </html>
